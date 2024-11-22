@@ -39,6 +39,7 @@ span {
     font-weight: 500;
     cursor: pointer;
 }
+
 .button.secondary {
     background: var(--white);
     color: var(--primay);
@@ -134,7 +135,7 @@ span {
     font-weight: 400;
     line-height: 27px;
     color: var(--white);
-    padding-top:25px ;
+    padding-top: 25px;
     padding-bottom: 30px;
 }
 
@@ -142,7 +143,81 @@ span {
     width: 50%;
 }
 
-.main_image{
+.main_image {
     display: flex;
     justify-content: end;
+    position: relative;
+}
+
+.main_image .watch {
+    position: absolute;
+    right: 305px;
+    top: -80px;
+    animation-name: watch;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 0;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+.main_image .light {
+    position: absolute;
+    right: 190px;
+    top: -150px;
+    animation-name: light;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+.main_image .sms {
+    position: absolute;
+    right: 0px;
+    top: -50px;
+    animation-name: sms;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+
+@keyframes watch {
+    0% {
+        right: 305px;
+        top: -80px;
+    }
+
+    100% {
+        right: 295px;
+        top: -70px
+    }
+}
+
+@keyframes light {
+    0% {
+        right: 190px;
+        top: -150px;
+    }
+
+    100% {
+        right: 180px;
+        top: -140px
+    }
+}
+
+@keyframes sms {
+    0% {
+        right: 0px;
+        top: -50px;
+    }
+
+    100% {
+        right: -10px;
+        top: -40px
+    }
 }
